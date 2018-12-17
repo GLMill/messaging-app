@@ -7,7 +7,7 @@ class Messaging < Sinatra::Base
     erb :index
   end
 
-  post ('/board') do
+  post ('/name') do
     session[:name] = params[:name]
   end
 
