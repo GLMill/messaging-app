@@ -1,14 +1,13 @@
-# feature "board" do
-#   scenario "user should see a 'new' button" do
-#     login
-#     click_button "New"
-#     fill_in :content , with: "Hello"
-#     expect(page).to have_content("Create new message :")
-#   end
-#
-#   scenario "user should see a 'view' button" do
-#     login
-#     click_button "View"
-#     expect(page).to have_content("Here is your history")
-#   end
-# end
+feature 'new message' do
+  scenario 'user creates a new message' do
+    login
+    click_link "New"
+    expect(page).to have_content 'Create a new message:'
+  end
+
+  scenario 'user view history messages' do
+    login
+    click_link "View"
+    expect(page).to have_content 'History:'
+  end
+end

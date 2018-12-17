@@ -17,4 +17,11 @@ class Messaging < Sinatra::Base
     erb(:board)
   end
 
+  get ('/new') do
+    "Create a new message:"
+  end
+
+  get ('/view') do
+    "History:"
+  end
 end
