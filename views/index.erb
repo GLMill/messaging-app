@@ -1,5 +1,5 @@
 <div>
-  <h1>Welcome to Messaging World</h1>
+  <h1>Welcome to Messaging World:</h1>
 </div>
 
 <div>
@@ -7,9 +7,14 @@
 </div>
 
 <div>
-  <form action="/" method="">
+  <form action="/messages" method="post">
       <label>Enter message:</label> <br>
-      <textarea name="message" rows="5" cols="80"></textarea> <br>
+      <textarea name="content" rows="5" cols="80"></textarea> <br>
       <input type="submit" name="Submit" value="Submit">
   </form>
+  <% @messages.reverse.each do |message| %>
+  <div>
+    <%= message.content %> | <%= message.time %>
+  </div>
+  <% end %>
 </div>
