@@ -7,6 +7,15 @@ class Messaging < Sinatra::Base
     erb :index
   end
 
+  post ('/message') do
+    session[:message] = params[:message]
+    redirect('/board')
+  end
+
+  get ('/board') do
+    @message = session[:message]
+    erb :index
+  end
 
 
 end

@@ -4,10 +4,11 @@
 
 <div>
   <p>Recent messages:</p>
+  <p><%=@message %></p>
 </div>
 
 <div>
-  <form action="/" method="">
+  <form action="/message" method="post">
       <label>Enter message:</label> <br>
       <textarea name="message" rows="5" cols="80"></textarea> <br>
       <input type="submit" name="Submit" value="Submit">
