@@ -5,9 +5,12 @@ class Messaging < Sinatra::Base
 
   enable :sessions
 
-  get ('/') do
+  before do
     session[:messages] ||=[]
     @messages = session[:messages]
+  end
+
+  get ('/') do
     erb(:index)
   end
 
@@ -18,6 +21,11 @@ class Messaging < Sinatra::Base
   end
 
   get ('/selected-message') do
-     'route working'
+     @messages.each do|obj|
+       if obj.time == params['id']
+          @single_message == object
+          return
+        end
+      end
   end
 end

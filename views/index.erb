@@ -17,7 +17,7 @@
   <div class='message_thumbnail'>
     <p class = 'message'><%= message.preview %> </p>
     <p><%= message.time %> </p>
-    <p><a href='/selected-message'>View</a></p>
+    <p><a href="/selected-message?id=<%=message.time%>">View</a></p>
   </div>
   <% end %>
 </div>
