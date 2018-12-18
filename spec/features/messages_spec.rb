@@ -5,9 +5,7 @@ feature 'homepage' do
   end
 
   scenario 'can submit message' do
-    visit('/')
-    fill_in :content, with: 'Hello'
-    click_button 'Submit'
+    post_message
     expect(page).to have_content 'Hello'
   end
 
