@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require './lib/messenger'
+require './lib/message'
 
 class Messaging < Sinatra::Base
 
@@ -12,7 +12,7 @@ class Messaging < Sinatra::Base
   end
 
   post ('/messages') do
-    message = Messenger.new(params[:content])
+    message = Message.new(params[:content])
     session[:messages] << message
     redirect('/')
   end

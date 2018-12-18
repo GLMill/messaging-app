@@ -1,4 +1,4 @@
-class Messenger
+class Message
 
   attr_reader :content, :time
 
