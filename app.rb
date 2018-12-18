@@ -16,4 +16,8 @@ class Messaging < Sinatra::Base
     session[:messages] << message
     redirect('/')
   end
+
+  get ('/selected-message') do
+     'route working'
+  end
 end

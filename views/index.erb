@@ -15,7 +15,7 @@
   </form>
   <% @messages.reverse.each do |message| %>
   <div>
-    <%= message.content %> | <%= message.time %>
+    <%= message.content %> | <%= message.time %> <a href='/selected-message'>View</a>
   </div>
   <% end %>
 </div>
