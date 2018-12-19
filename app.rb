@@ -15,17 +15,9 @@ class Messaging < Sinatra::Base
   end
 
   post ('/messages') do
-    message = Message.new(params[:content])
+    message = Message.new(params[:content], params[:id])
     session[:messages] << message
     redirect('/')
   end
 
-  get ('/selected-message') do
-     @messages.each do|obj|
-       if obj.time == params['id']
-          @single_message == object
-          return
-        end
-      end
-  end
-end
+ end

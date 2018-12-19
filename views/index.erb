@@ -1,10 +1,7 @@
+<!DOCTYPE html>
+<html>
 <div>
   <h1>Welcome to Messaging World:</h1>
-</div>
-
-<div>
-  <p>Recent messages:</p>
-  <p><%=@message %></p>
 </div>
 
 <div>
@@ -13,11 +10,13 @@
       <textarea name="content" rows="5" cols="80"></textarea> <br>
       <input type="submit" name="Submit" value="Submit">
   </form>
+
+  <div>
+    <p>Recent messages:</p>
+  </div><br>
   <% @messages.reverse.each do |message| %>
-  <div class='message_thumbnail'>
-    <p class = 'message'><%= message.preview %> </p>
-    <p><%= message.time %> </p>
-    <p><a href="/selected-message?id=<%=message.time%>">View</a></p>
-  </div>
+  <a href= '/selected_message'><%= message.content[0..20] %> </a>
+    <p><%= message.id %> </p>
   <% end %>
 </div>
+</html>

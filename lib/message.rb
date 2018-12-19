@@ -1,13 +1,9 @@
 class Message
 
-  attr_reader :content, :time
+  attr_reader :content, :id
 
-  def initialize(content)
+  def initialize(content, id)
     @content = content
-    @time = Time.now
-  end
-
-  def preview
-    @content[0,20]
+    @id = Time.now
   end
 end
