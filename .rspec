@@ -1,3 +1,6 @@
 --require spec_helper
+<<<<<<< HEAD
 format documentation
 color
+=======
+>>>>>>> better_tests/master
