@@ -12,3 +12,5 @@ gem "rspec"
 gem "capybara"
 
 gem 'pry'
+
+gem "bcrypt", "~> 3.1"

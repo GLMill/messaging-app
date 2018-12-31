@@ -112,6 +112,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1)
   capybara
   data_mapper
   dm-postgres-adapter
@@ -120,4 +121,4 @@ DEPENDENCIES
   sinatra
 
 BUNDLED WITH
-   1.16.3
+   1.16.6
