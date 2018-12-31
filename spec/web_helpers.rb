@@ -2,5 +2,5 @@ DEFAULT_MESSAGE = 'Hello, how are you today ? Do you want to grab a drink tonigh
 def post_message(msg = DEFAULT_MESSAGE)
   visit('/')
   fill_in :content, with: msg
-  click_button 'Submit'
+  click_button 'Create'
 end
