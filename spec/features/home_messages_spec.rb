@@ -1,4 +1,4 @@
-RSpec.feature 'Messages' do
+RSpec.feature 'home screen messages' do
   
   context 'Creating' do
     let(:message_one){ 'message one' }
@@ -27,19 +27,7 @@ RSpec.feature 'Messages' do
 
   end
 
-  context 'Seeing a message' do
-    ### this needs to be tidied
-    scenario 'click on a message shows the full text of the message' do
-      message = Message.create(content: "A fancy message!")
-      visit '/'
-      click_on 'A fancy message!'
-      expect(page.current_path).to eq("/messages/#{message.id}")
-      expect(page).to have_content('A fancy message!')
-    end
-
-  end 
-
-  scenario "Only the 20 first characters of the message are displayed" do
+  it "Only the 20 first characters of the message are displayed" do
     post_message
     expect(page).to have_content("Hello, how are you t")
   end
