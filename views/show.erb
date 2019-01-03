@@ -5,6 +5,10 @@
         <%= @message.created_at %>: <span><%= @message.content %></span>
         <div id = 'button-container'>
           <button type="button" id='edit_button'> edit</button> 
+          <form id='edit_form' method = 'POST' action = '/update_message/<%= @message.created_at %>'>
+            <input type='text' name='update' id='update_message'>
+            <input type="submit" value="Update">
+          </form>
         </div>
       </div>
 

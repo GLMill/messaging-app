@@ -23,7 +23,11 @@ class MessageApp < Sinatra::Base
 
   get '/messages/:id' do
     @message = Message.get(params[:id])
-
     erb(:show)
   end
+
+  post '/update_message/:id/:update' do 
+    @data = params[:id]
+  end
+  
 end

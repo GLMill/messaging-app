@@ -2,10 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href= "<%= url("css/main.css")%>" />
     <title></title>
   </head>
   <body>
     <%= yield %>
     <%=  erb :"_footer" %>
+    <script src ="<%= url("scripts/main.js")%>"></script>
   </body>
 </html>
