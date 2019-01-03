@@ -3,5 +3,8 @@
     <h1>A MESSAGE APP</h1>
       <div>
         <%= @message.created_at %>: <span><%= @message.content %></span>
+        <div id = 'button-container'>
+          <button type="button" id='edit_button'> edit</button> 
+        </div>
       </div>
 
