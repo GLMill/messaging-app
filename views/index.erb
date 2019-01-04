@@ -6,7 +6,7 @@
     </form>
     <div id = 'messages-container'>
       <% @messages.reverse.each do |message| %>
-        <div>
+        <div class = 'message'>
           <%= message.created_at %>:<%= message.content %> <a href=<%="/messages/#{message.id}"%>>view</a>
         </div>
       <% end %>

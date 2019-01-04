@@ -1,4 +1,5 @@
 RSpec.feature 'deleting a message' do 
+
     before {
         post_message
         view_single_message
@@ -9,5 +10,6 @@ RSpec.feature 'deleting a message' do
     end
 
     it 'should remove the message from the home screen' do 
+      
     end 
 end 
