@@ -29,8 +29,10 @@ RSpec.feature 'single view should allow us to edit a post' do
             expect(page).to have_content(editted_message)
         end
 
-        
-
-        
+        it 'the updated messages should update its created at time' do 
+            fill_in :update, with: editted_message
+            click_button('Update')
+            expect(page).to have_content(editted_message)
+        end        
     end
 end 

@@ -4,12 +4,12 @@ RSpec.feature 'home screen messages' do
     let(:message_one){ 'message one' }
     let(:message_two){ 'message two' }
     let(:message_three){ 'message three' }
-    # now using date time from post sql
-    # scenario 'A user can submit text and see it with a timestamp' do
-    #   time = Time.now.getutc
-    #   post_message
-    #   expect(page).to have_content time
-    # end
+   
+    it 'should save with a time stamp' do
+      p time = DateTime.now
+      post_message
+      expect(page).to have_content time
+    end
 
     it 'it redirects user back to the index' do
       post_message
