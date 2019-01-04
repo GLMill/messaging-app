@@ -7,11 +7,7 @@
     <div id = 'messages-container'>
       <% @messages.reverse.each do |message| %>
         <div class = 'message'>
-<<<<<<< HEAD
           <%= message.created_at %>:<p><%= message.content[0...20] %></p><a href=<%="/messages/#{message.id}"%>>view</a>
-=======
-          <%= message.created_at %>:<%= message.content %> <a href=<%="/messages/#{message.id}"%>>view</a>
->>>>>>> cf1df1f4e33fe09e37b36939dc57cbf11b81989e
         </div>
       <% end %>
     </div>
