@@ -9,6 +9,5 @@ window.onload = () => {
 
   function show_form(){
     edit_form.style.display = 'block';
-    console.log('im connected')
   }
 }
