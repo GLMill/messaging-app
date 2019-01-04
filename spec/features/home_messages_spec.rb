@@ -25,11 +25,12 @@ RSpec.feature 'home screen messages' do
       expect(page).to have_content message_three
     end
 
-  end
+    it "Only the 20 first characters of the message are displayed" do
+      post_message
+      p first('#messages-container .message p').text
+      expect(first('#messages-container .message p').text.length <= 20).to be(true)
+    end
 
-  it "Only the 20 first characters of the message are displayed" do
-    post_message
-    expect(page).to have_content("Hello, how are you t")
   end
 
 end
