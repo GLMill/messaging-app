@@ -23,16 +23,21 @@ RSpec.feature 'single view should allow us to edit a post' do
             expect(page).to have_selector('#edit_form', visible:true)  
         end
 
-        it 'should send message to update route' do 
-            fill_in :update, with: editted_message
-            click_button('Update')
-            expect(page).to have_content(editted_message)
-        end
+        context 'submitting an edit' do 
+            let(:time) { DateTime.now }
 
-        it 'the updated messages should update its created at time' do 
-            fill_in :update, with: editted_message
-            click_button('Update')
-            expect(page).to have_content(editted_message)
-        end        
+            before {
+                fill_in :update, with: editted_message
+                click_button('Update')
+            }
+   
+            it 'should send message to update route' do 
+                expect(page).to have_content(editted_message)
+            end
+
+            it 'the updated messages should update its created at time' do 
+                expect(page).to have_content(time)
+            end   
+       end     
     end
 end 

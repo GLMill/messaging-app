@@ -6,7 +6,7 @@ RSpec.feature 'home screen messages' do
     let(:message_three){ 'message three' }
    
     it 'should save with a time stamp' do
-      p time = DateTime.now
+      time = DateTime.now
       post_message
       expect(page).to have_content time
     end
