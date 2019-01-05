@@ -1,9 +1,14 @@
 ENV['RACK_ENV'] = 'test'
 
-require_relative '../app.rb'
+## coverage
+require 'simplecov'
+SimpleCov.start
 
+# app
+require_relative '../app.rb'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
+#linking resources
 require 'capybara/rspec'
 require 'rspec'
 require 'web_helpers'

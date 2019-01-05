@@ -32,7 +32,7 @@ RSpec.feature 'single view should allow us to edit a post' do
             }
    
             it 'should send message to update route' do 
-                expect(page).to have_content(editted_message)
+                expect(page).to have_content(editted_message[0...20])
             end
 
             it 'the updated messages should update its created at time' do 

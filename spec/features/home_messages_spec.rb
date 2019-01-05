@@ -27,7 +27,7 @@ RSpec.feature 'home screen messages' do
 
     it "Only the 20 first characters of the message are displayed" do
       post_message
-      p first('#messages-container .message p').text
+      first('#messages-container .message p').text
       expect(first('#messages-container .message p').text.length <= 20).to be(true)
     end
 

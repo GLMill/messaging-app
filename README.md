@@ -3,8 +3,14 @@
 
 Todo 
 
-- css and js not linked :( boo hoo link that
+
 - linked but error as not on all pages how do we make a script specific for a page?
-- then see if way to send both params though form or else do via js
-- need to find out how to delete datbase entries after suite 
-- finish delete button 
+
+- need to find out how to delete datbase entries after suite. look at after all and Messages.all.destroy
+
+- test is passing - second delete message when it really shouldnt be passing lol
+
+- i dont like this much logic in the route 
+
+- install simplecov etc stuff 
+
