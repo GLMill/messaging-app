@@ -1,12 +1,18 @@
 ENV["RACK_ENV"] ||= 'development'
 
 require 'sinatra/base'
+require 'sinatra/config_file'
 require './lib/message'
 require './config/data_mapper'
+
+
+
 
 require 'pry'
 
 class MessageApp < Sinatra::Base
+  register Sinatra::ConfigFile
+  config_file './config/config.yml'
   set :sessions, true
 
   get '/' do

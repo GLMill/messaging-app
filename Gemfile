@@ -16,3 +16,5 @@ gem 'pry'
 gem "bcrypt", "~> 3.1"
 
 gem 'simplecov', require: false, group: :test
+
+gem "sinatra-config-file", "~> 1.0"
