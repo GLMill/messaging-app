@@ -5,7 +5,7 @@
         <%= @message.created_at %>: <span><%= @message.content %></span>
         <div id = 'button-container'>
           <button type="button" id='edit_button'> edit</button> 
-          <button type='button' id ='delete_button'>delete</button>
+          <a id='delete' href="<%= url("/delete")%>">delete</a>
         </div>
         <form id='edit_form' action ='/update_message' method ='post' >
           <input type='text' name='update' id='update_message'>

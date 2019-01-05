@@ -18,10 +18,7 @@ gem "bcrypt", "~> 3.1"
 gem 'simplecov', require: false, group: :test
 
 gem "sinatra-config-file", "~> 1.0"
-<<<<<<< HEAD
 
 gem "database_cleaner", "~> 1.7"
 
 gem "dm-transactions", "~> 1.2"
-=======
->>>>>>> fca2289c036cff342beae67fd79385559853d8a2

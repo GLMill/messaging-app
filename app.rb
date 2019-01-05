@@ -4,10 +4,6 @@ require 'sinatra/base'
 require 'sinatra/config_file'
 require './lib/message'
 require './config/data_mapper'
-
-
-
-
 require 'pry'
 
 class MessageApp < Sinatra::Base
@@ -39,5 +35,15 @@ class MessageApp < Sinatra::Base
       'The rescource could not be saved'
     end
   end
+
+  get '/delete' do
+    @message = Message.get(session[:message_to_update])
+    if @message.destroy
+      redirect '/'
+    else 
+      'The rescource could not deleted'
+    end 
+  end
+
 
 end
