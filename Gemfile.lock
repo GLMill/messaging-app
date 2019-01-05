@@ -34,6 +34,7 @@ GEM
       dm-validations (~> 1.2.0)
     data_objects (0.10.17)
       addressable (~> 2.1)
+    database_cleaner (1.7.0)
     diff-lcs (1.3)
     dm-aggregates (1.2.0)
       dm-core (~> 1.2.0)
@@ -144,7 +145,9 @@ DEPENDENCIES
   bcrypt (~> 3.1)
   capybara
   data_mapper
+  database_cleaner (~> 1.7)
   dm-postgres-adapter
+  dm-transactions (~> 1.2)
   pry
   rspec
   simplecov
