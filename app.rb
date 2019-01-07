@@ -4,7 +4,10 @@ require 'sinatra/base'
 require 'sinatra/config_file'
 require './lib/message'
 require './config/data_mapper'
-require 'pry'
+#require 'pry'
+
+require "bundler"
+Bundler.require(:default)
 
 class MessageApp < Sinatra::Base
   register Sinatra::ConfigFile

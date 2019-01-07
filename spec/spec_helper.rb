@@ -1,16 +1,22 @@
 ENV['RACK_ENV'] = 'test'
 
+
 ## coverage
-require 'simplecov'
+require 'bundler'
+Bundler.require(:testing)
+gem 'simplecov', require: false
 SimpleCov.start
+
+
 
 # app
 require_relative '../app.rb'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 #linking resources
+
 require 'capybara/rspec'
-require 'rspec'
+
 require 'web_helpers'
 
 Capybara.app = MessageApp

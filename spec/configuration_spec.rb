@@ -1,5 +1,6 @@
 require "rspec/expectations"
-require 'database_cleaner'
+
+Bundler.require(:testing)
 
 RSpec.configure do |config|
 
