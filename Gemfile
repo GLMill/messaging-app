@@ -20,6 +20,9 @@ group :testing do
     gem "sinatra-config-file", "~> 1.0"
     gem "database_cleaner", "~> 1.7"
     gem "dm-transactions", "~> 1.2"
+
+    require 'simplecov'
+    SimpleCov.start
 end
 
 

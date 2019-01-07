@@ -2,8 +2,7 @@
 ## coverage
 require 'bundler'
 Bundler.require(:testing)
-# require 'simplecov'
-# SimpleCov.start
+
 
 
 # app
