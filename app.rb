@@ -7,9 +7,12 @@ require "bundler"
 Bundler.require(:default)
 
 class MessageApp < Sinatra::Base
+
   register Sinatra::ConfigFile
   config_file './config/config.yml'
-  set :sessions, true
+
+  set :sessions, true ## enable sessions
+  
 
   get '/' do
     @messages = Message.all

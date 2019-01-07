@@ -1,9 +1,9 @@
 development:
   name: development
-  database: message_app_development
+  database: 'message_app_development'
 test:
-  name: test
-  database:  message_app_test
+  name: test,
+  database: 'message_app_test'
 production:
   name: production
-  database:  message_app_production
+  database:  'message_app_production'
