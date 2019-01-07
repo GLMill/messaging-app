@@ -1,19 +1,23 @@
+require 'data_mapper'
 require './lib/message'
+require 'data_mapper'
 task default: %w[setup]
 
 task :setup do 
-    p 'setting up database'
-    DataMapper.setup(:default, "postgres://localhost/message_app_development")
-end
-
-task :finalize do 
-    p 'finalizing database'
+    DataMapper.setup(:default, "postgres://localhost/message_app_#{ENV['RACK_ENV']}")
     DataMapper.finalize
+    puts 'setting up database'
+
 end
 
-task :automigrate do 
-    p 'migrating database'
+task :auto_migrate => :setup do 
     DataMapper.auto_migrate!
+    puts 'migrating database'
+end
+
+task :auto_upgrade => :setup do 
+    DataMapper.auto_upgrade!
+    puts 'migrating database'
 end
 
 task :clean do 

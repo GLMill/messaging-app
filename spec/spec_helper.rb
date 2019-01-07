@@ -1,5 +1,3 @@
-ENV['RACK_ENV'] = 'test'
-
 
 ## coverage
 require 'bundler'
