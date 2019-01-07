@@ -20,7 +20,7 @@ RSpec.feature 'deleting a message' do
     it 'should remove the message from the home screen' do 
        click_link('delete')
        visit '/'
-       p dummy_message[0...20]
+       dummy_message[0...20]
        expect(page).not_to have_content(dummy_message[0...20])
     end 
 end 
