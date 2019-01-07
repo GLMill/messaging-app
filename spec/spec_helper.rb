@@ -4,9 +4,8 @@ ENV['RACK_ENV'] = 'test'
 ## coverage
 require 'bundler'
 Bundler.require(:testing)
-gem 'simplecov', require: false
-SimpleCov.start
-
+# require 'simplecov'
+# SimpleCov.start
 
 
 # app
