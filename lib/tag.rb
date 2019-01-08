@@ -1,6 +1,6 @@
 require 'data_mapper'
 
-class Message
+class Tag
   include DataMapper::Resource
 
   property :id, Serial
@@ -9,9 +9,6 @@ class Message
   property :updated_at, DateTime
 
   has n, :taggings
-  has n, :tags, :through => :taggings
+  has n, :messages, :through => :taggings
 
-  def twenty_chars 
-    self.content[0...20]
-  end
 end

@@ -3,6 +3,10 @@ require 'sinatra/config_file'
 require './lib/message'
 require './config/data_mapper'
 
+#
+require './lib/tag'
+
+
 require "bundler"
 Bundler.require(:default)
 
@@ -12,16 +16,21 @@ class MessageApp < Sinatra::Base
   register Sinatra::ConfigFile
   config_file './config/config.yml'
 
+  p settings.name
+
   set :sessions, true ## enable sessions
   
 
   get '/' do
-    @messages = Message.all
+    p @messages = Message.all
+    p @tag = Tag.all
+    @cat = 'meow'
     erb(:index)
   end
 
   post '/message' do
     Message.create(content: params[:content])
+    Tag.create(content: params[:tag])
     redirect '/'
   end
 

@@ -2,6 +2,7 @@
     <h1>A MESSAGE APP</h1>
     <form action="/message" method="post">
       <input type="text" name="content">
+      <input type='text' name='tag'>
       <input type="submit" value="Create">
     </form>
     <div id = 'messages-container'>
@@ -11,5 +12,7 @@
         </div>
       <% end %>
     </div>
+    <% p @cat %>
+   
   </div>
  
