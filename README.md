@@ -23,6 +23,12 @@ A simple messaging app that displays messages from a database in reverse chronol
 - understand and use environment variable succesfully
 - use a partial 
 
+** challenges 
 
+- I found writing a Rakefile tricky. Organizing which thing requuired what was confusing. 
+
+- I still have not made use of the sinatra configuration setup and am confused as to how to link to environment variable. 
+
+- im not happy with code in the route of this how to i organize this out?
 
 
