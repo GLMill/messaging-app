@@ -387,13 +387,13 @@
         null,
         null,
         1,
-        2,
-        2,
+        4,
+        4,
         null,
         null,
         1,
-        0,
-        0,
+        2,
+        2,
         null,
         null,
         1,
@@ -433,6 +433,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        15,
+        null,
         null
       ],
       "/Users/Huxley/Desktop/makers_ruby/week4/message_app/config/data_mapper.rb": [
@@ -444,6 +448,6 @@
         null
       ]
     },
-    "timestamp": 1546940052
+    "timestamp": 1546943101
   }
 }
