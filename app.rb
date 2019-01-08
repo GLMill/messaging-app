@@ -1,9 +1,12 @@
 require 'sinatra/base'
 require 'sinatra/config_file'
-require './lib/message'
+
 require './config/data_mapper'
 
 #
+
+require './lib/tagging'
+require './lib/message'
 require './lib/tag'
 
 
@@ -22,9 +25,8 @@ class MessageApp < Sinatra::Base
   
 
   get '/' do
-    p @messages = Message.all
-    p @tag = Tag.all
-    @cat = 'meow'
+    @messages = Message.all
+    @tags = Tag.all
     erb(:index)
   end
 
