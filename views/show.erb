@@ -1,5 +1,5 @@
 
-
+ <div id = 'wrapper'>
     <h1>A MESSAGE APP</h1>
       <div>
         <%= @message.created_at %>: <span><%= @message.content %></span>
@@ -12,8 +12,8 @@
           <input type="submit" value="Update">
         </form>
       </div>
-
+  </div>
       <!--- JS -->
       <script src ="<%= url("scripts/update_form.js")%>"></script>
-      
+
 

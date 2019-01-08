@@ -1,16 +1,28 @@
-**** 
+** README
+
+** Description
+
+A simple messaging app that displays messages from a database in reverse chronological orders. Allows functionality to view a single message, update a message and delete a message. This is working.
+
+** SETUP
+
+1. clone this repo
+2. setup environment variable in terminal
+3. bundle install (this will install testing gems and default gems)
+4. rackup -p 4567
+5. tah dah!
 
 
-Todo 
+
+** LO 
+
+- To write expresssive readable tests and code.
+- To use capybara effectively.
+- To write a configuration doc that clears database after testing. 
+- Use a rakefile. 
+- understand and use environment variable succesfully
+- use a partial 
 
 
-- linked but error as not on all pages how do we make a script specific for a page?
 
-- need to find out how to delete datbase entries after suite. look at after all and Messages.all.destroy
-
-- test is passing - second delete message when it really shouldnt be passing lol
-
-- i dont like this much logic in the route 
-
-- install simplecov etc stuff 
 

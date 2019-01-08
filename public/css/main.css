@@ -29,7 +29,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-    line-height: 1;
+	line-height: 1;
+	background: #ececec;
+
 }
 ol, ul {
 	list-style: none;
@@ -51,4 +53,13 @@ table {
 
 #edit_form{
     overflow: hidden;
+}
+
+#wrapper{
+	margin: 10vh 0vw;
+	width:60%;
+	border-radius: 10px;
+	margin: 0 auto;
+	background: white;
+	text-align: center;
 }

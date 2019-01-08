@@ -8,6 +8,7 @@ Bundler.require(:default)
 
 class MessageApp < Sinatra::Base
 
+  ## what is this doing??
   register Sinatra::ConfigFile
   config_file './config/config.yml'
 
