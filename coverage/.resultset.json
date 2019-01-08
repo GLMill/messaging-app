@@ -125,10 +125,13 @@
       "/Users/Huxley/Desktop/makers_ruby/week4/message_app/app.rb": [
         1,
         1,
-        1,
+        null,
         1,
         null,
         null,
+        null,
+        1,
+        1,
         1,
         null,
         null,
@@ -150,7 +153,6 @@
         3,
         3,
         3,
-        3,
         null,
         null,
         1,
@@ -183,6 +185,28 @@
         null,
         null,
         null,
+        null,
+        null
+      ],
+      "/Users/Huxley/Desktop/makers_ruby/week4/message_app/config/data_mapper.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Huxley/Desktop/makers_ruby/week4/message_app/lib/tagging.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
         null,
         null
       ],
@@ -197,12 +221,6 @@
         1,
         1,
         null,
-        1,
-        10,
-        null,
-        null
-      ],
-      "/Users/Huxley/Desktop/makers_ruby/week4/message_app/config/data_mapper.rb": [
         1,
         1,
         null,
@@ -219,6 +237,9 @@
         null,
         1,
         1,
+        1,
+        1,
+        null,
         1,
         1,
         null,
@@ -266,11 +287,12 @@
         null
       ]
     },
-    "timestamp": 1546961014
+    "timestamp": 1546962292
   },
   "Unknown Test Framework": {
     "coverage": {
       "/Users/Huxley/Desktop/makers_ruby/week4/message_app/rakefile.rb": [
+        1,
         1,
         1,
         1,
@@ -296,6 +318,17 @@
         0,
         null
       ],
+      "/Users/Huxley/Desktop/makers_ruby/week4/message_app/lib/tagging.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Huxley/Desktop/makers_ruby/week4/message_app/lib/message.rb": [
         1,
         null,
@@ -304,6 +337,9 @@
         null,
         1,
         1,
+        1,
+        1,
+        null,
         1,
         1,
         null,
@@ -323,9 +359,12 @@
         1,
         1,
         null,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1546960077
+    "timestamp": 1546963502
   }
 }

@@ -12,7 +12,9 @@
         </div>
       <% end %>
     </div>
-    <% p @cat %>
+    <% @tags.each do|tag| %>
+      <%= tag.content %>
+    <% end %>
    
   </div>
  

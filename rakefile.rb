@@ -1,4 +1,5 @@
 require 'data_mapper'
+require './lib/tagging'
 require './lib/message'
 require './lib/tag'
 task default: %w[setup]
