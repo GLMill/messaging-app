@@ -19,20 +19,27 @@ class MessageApp < Sinatra::Base
   register Sinatra::ConfigFile
   config_file './config/config.yml'
 
+   # rspec only works for test and setting is changing to the rack env :)
   p settings.name
+  p ENV['RACK_ENV']
 
   set :sessions, true ## enable sessions
   
 
   get '/' do
     @messages = Message.all
-    @tags = Tag.all
     erb(:index)
   end
 
   post '/message' do
-    Message.create(content: params[:content])
-    Tag.create(content: params[:tag])
+    message = Message.create(content: params[:content])
+    tag = Tag.create(content: params[:tag])
+    message.tags << tag
+    message.save
+    message.tags.each do |tag|
+      p tag.content
+    end
+
     redirect '/'
   end
 

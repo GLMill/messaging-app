@@ -1,6 +1,6 @@
 RSpec.feature 'deleting a message' do 
     let(:dummy_message){ 'im not here '}
-    let(:start_url){ 'http://www.example.com/' }
+
 
     before {
         post_message(dummy_message)
@@ -13,7 +13,7 @@ RSpec.feature 'deleting a message' do
 
     it 'should take us back to the home screen' do 
         click_link('delete')
-        expect(page.current_url).to eq(start_url)
+        expect(page.current_path).to eq('/delete')
     end
    
     ## this is passing but shouldnt 

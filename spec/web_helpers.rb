@@ -1,7 +1,8 @@
 
-def post_message(msg = 'Hello, how are you today ? Do you want to grab a drink tonight ?')
+def post_message(msg = 'default message', tag = '')
   visit('/')
   fill_in :content, with: msg
+  fill_in :tag, with: tag
   click_button 'Create'
 end
 

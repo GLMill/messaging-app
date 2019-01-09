@@ -8,13 +8,15 @@ RSpec.feature 'ability to tag messages' do
         expect(page).to have_field('tag')
     end
 
-    it ''do 
-        visit('/')
-        fill_in :content, with: message
-        fill_in :tag, with: tag
-        click_button 'Create'
+    it 'should display tags'do 
+        post_message(message, tag)
         expect(page).to have_content(tag)
     end
+
+    it 'should not allow duplicate tags to be saved' do 
+        post_message(message, tag)
+        post_message(message, tag)
+    end 
 
 
 
