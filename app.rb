@@ -28,17 +28,18 @@ class MessageApp < Sinatra::Base
 
   get '/' do
     @messages = Message.all
+    @messages.tags.each do |tag|
+      p tag.content
+    end
     erb(:index)
   end
 
   post '/message' do
     message = Message.create(content: params[:content])
-    tag = Tag.create(content: params[:tag])
+    tag = Tag.first_or_create(content: params[:tag])
     message.tags << tag
     message.save
-    message.tags.each do |tag|
-      p tag.content
-    end
+  
 
     redirect '/'
   end

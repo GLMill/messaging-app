@@ -8,9 +8,12 @@
     <div id = 'messages-container'>
       <% @messages.reverse.each do |message| %>
         <div class = 'message'>
-           <p><% "Tag: #{message.tags[0].content}" %></p>
+           
           <%= message.created_at %>:<p><%= message.twenty_chars %></p>
           <a href= <%="/messages/#{message.id}"%> >view</a>
+          <% message.tags.each do |tag| %>
+             <%= tag.content%>
+           <% end %>
         </div>
       <% end %>
     </div>
